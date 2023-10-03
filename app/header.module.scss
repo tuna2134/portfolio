@@ -1,9 +1,25 @@
 .header {
-    width: 100%;
-    border-bottom: 1px solid gray;
-}
+  width: 100%;
+  border-bottom: 1px solid gray;
+  position: sticky;
+  top: 0;
+  background-color: aliceblue;
+  animation-name: fadeInAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 
-.headerHW {
+  @keyframes fadeInAnime {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .headerHW {
     width: 100%;
     max-width: 56rem;
     margin-left: auto;
@@ -11,22 +27,27 @@
     height: 4.5rem;
     display: flex;
     align-items: center;
-}
+  }
 
-.title {
+  .title {
     font-size: 42px;
-}
+  }
 
-.navItems {
+  .navItems {
     margin-left: auto;
-}
+  }
 
-.navItem {
+  .navItem {
     margin-left: 16px;
     font-size: 16px;
     text-decoration: none;
 
     &:hover {
-        color: green;
+      color: green;
     }
+  }
+}
+
+.hidden {
+  display: none;
 }

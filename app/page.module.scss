@@ -1,48 +1,83 @@
 .main__one {
-    width: 100%;
-    height: 91vh;
-    background-image: linear-gradient(90deg, rgba(103, 126, 250, 1), rgba(142, 84, 219, 1));
-    background-size: 150% 150%;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+    90deg,
+    rgba(103, 126, 250, 1),
+    rgba(142, 84, 219, 1)
+  );
+  background-size: 150% 150%;
 
-    animation-name: gradation;
-    animation-duration: 3.0s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
+  animation-name: gradation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
 
-    .main__one_children {
+  .main__one_children {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    color: white;
+
+    .main__one_children_content {
+      width: 100%;
+      h1 {
+        text-align: center;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+      animation-name: childrenContent;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+      opacity: 0;
+
+      @keyframes childrenContent {
+        from {
+          opacity: 0;
+          transform: translateY(150px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .main__one_children_img {
+        width: 100%;
         display: flex;
-        align-items: center;
-        height: 100%;
-        max-width: 20rem;
-        margin-left: auto;
-        margin-right: auto;
-        position: relative;
-        color: white;
-        .main__one_children_content {
-            width: 100%;
-            h1 {
-                text-align: center;
-                margin-top: 0.5rem;
-                margin-bottom: 0.5rem;
-            };
-            .main__one_children_img {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                img {
-                    border-radius: 100%;
-                };
-            };
-        };
+        justify-content: center;
+        img {
+          border-radius: 100%;
+        }
+      }
     }
+  }
 
-    @keyframes gradation{
-        0%{
-            background-position: 0% 0%;
-        }
-        100%{
-            background-position: 100% 100%;
-        }
+  @keyframes gradation {
+    0% {
+      background-position: 0% 0%;
     }
-};
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+}
+
+.main__two {
+  min-height: 100vh;
+  width: 100%;
+  margin-top: 5rem;
+
+  .main__two_content {
+    max-width: 60rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
