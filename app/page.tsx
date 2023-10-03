@@ -1,4 +1,5 @@
 import styles from "./page.module.scss";
+import Image from "next/image";
 
 const IMAGE_SIZE = 120;
 
@@ -19,7 +20,12 @@ export default async function Home() {
         <div className={styles.main__one_children}>
           <div className={styles.main__one_children_content}>
             <div className={styles.main__one_children_img}>
-              <img width={IMAGE_SIZE} height={IMAGE_SIZE} src={IMAGE_URL}></img>
+              <Image
+                alt="user.icon"
+                width={IMAGE_SIZE}
+                height={IMAGE_SIZE}
+                src={IMAGE_URL}
+              ></Image>
             </div>
             <div>
               <h1>tuna2134</h1>
