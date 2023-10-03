@@ -12,7 +12,7 @@ export const Header: React.FC = () => {
             name: "discord",
             value: "/#discord",
         }
-    ]
+    ];
     return (
         <header className={styles.header}>
             <div className={styles.headerHW}>
