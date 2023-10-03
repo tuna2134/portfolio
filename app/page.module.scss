@@ -3,7 +3,7 @@
     height: 91vh;
     background-image: linear-gradient(90deg, rgba(103, 126, 250, 1), rgba(142, 84, 219, 1));
     background-size: 150% 150%;
-    
+
     animation-name: gradation;
     animation-duration: 5.0s;
     animation-iteration-count: infinite;
@@ -19,23 +19,21 @@
         margin-right: auto;
         position: relative;
         color: white;
-    };
-
-    .main__one_children_content {
-        width: 100%;
-        h1 {
-            text-align: center;
-            margin-top: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-    };
-
-    .main__one_children_img {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        img {
-            border-radius: 100%;
+        .main__one_children_content {
+            width: 100%;
+            h1 {
+                text-align: center;
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+            };
+            .main__one_children_img {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                img {
+                    border-radius: 100%;
+                };
+            };
         };
     }
 
@@ -46,5 +44,5 @@
         100%{
             background-position: 100% 100%;
         }
-     }
+    }
 };
