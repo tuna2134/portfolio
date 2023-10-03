@@ -22,7 +22,7 @@ export const Header: React.FC = () => {
   };
   const scrollEvent = () => {
     console.log(`${window.scrollY} ${document.documentElement.clientHeight}`);
-    if (window.scrollY >= window.innerHeight) {
+    if (window.scrollY >= (window.innerHeight / 3)) {
       actionHide(false);
     } else {
       actionHide(true);
