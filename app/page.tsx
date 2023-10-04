@@ -49,7 +49,7 @@ export default async function Home() {
                     width={128}
                     height={128}
                     src="/noimage.png"
-                    alt="ok"
+                    alt="noimage"
                   ></img>
                   <p>{name}</p>
                 </div>
