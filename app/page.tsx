@@ -1,3 +1,4 @@
+import { ImageOptimizerCache } from "next/dist/server/image-optimizer";
 import styles from "./page.module.scss";
 import Image from "next/image";
 
@@ -44,12 +45,12 @@ export default async function Home() {
             <div className={styles.main__two_content_language}>
               {languages.map((name, index) => (
                 <div key={index}>
-                  <Image
+                  <img
                     width={128}
                     height={128}
                     src="/noimage.png"
                     alt="ok"
-                  ></Image>
+                  ></img>
                   <p>{name}</p>
                 </div>
               ))}
