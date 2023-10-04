@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 .main__one {
   width: 100%;
   height: 100vh;
@@ -75,9 +77,33 @@
   margin-top: 5rem;
 
   .main__two_content {
-    max-width: 60rem;
+    max-width: 56rem;
     width: 100%;
+    padding-left: 20px;
     margin-left: auto;
     margin-right: auto;
+
+    h2 {
+      font-size: 40px;
+      margin-left: 8px;
+      margin-bottom: 6px;
+      text-decoration: underline;
+      text-decoration-color: $main-color;
+      text-decoration-skip-ink: none;
+    }
+
+    .main__two_content_language {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      text-align: center;
+      gap: 8px;
+
+      div {
+        border: 1px solid;
+        border-color: black;
+        border-radius: 0.5rem;
+        padding: 8px;
+      }
+    }
   }
 }

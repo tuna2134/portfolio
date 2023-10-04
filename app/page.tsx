@@ -4,6 +4,7 @@ import Image from "next/image";
 const IMAGE_SIZE = 120;
 
 export default async function Home() {
+  const languages = ["Python", "TypeScript", "JavaScript", "Rust"];
   const res = await fetch(
     "https://discord.com/api/v10/users/739702692393517076",
     {
@@ -40,8 +41,18 @@ export default async function Home() {
         <div className={styles.main__two_content}>
           <div>
             <h2>Language</h2>
-            <div>
-              <p>Python</p>
+            <div className={styles.main__two_content_language}>
+              {languages.map((name, index) => (
+                <div key={index}>
+                  <Image
+                    width={128}
+                    height={128}
+                    src="/noimage.png"
+                    alt="ok"
+                  ></Image>
+                  <p>{name}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
