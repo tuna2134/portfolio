@@ -65,7 +65,7 @@ export default async function Home() {
                   <img
                     width={128}
                     height={128}
-                    src=`/${language.image}`
+                    src={`/${language.image}`}
                     alt="image"
                   ></img>
                   <p>{language.name}</p>
