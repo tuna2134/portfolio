@@ -57,7 +57,7 @@ export default async function Home() {
       </div>
       <div className={styles.main__two}>
         <div className={styles.main__two_content}>
-          <div>
+          <div id="language">
             <h2>Language</h2>
             <div className={styles.main__two_content_language}>
               {languages.map((language, index) => (
