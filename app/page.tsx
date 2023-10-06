@@ -5,7 +5,24 @@ import Image from "next/image";
 const IMAGE_SIZE = 120;
 
 export default async function Home() {
-  const languages = ["Python", "TypeScript", "JavaScript", "Rust"];
+  const languages = [
+    {
+      name: "Python",
+      image: "python-logo-only.png",
+    },
+    {
+      name: "TypeScript",
+      image: "noimage.png",
+    },
+    {
+      name: "JavaScript",
+      image: "noimage.png",
+    },
+    {
+      name: "Rust",
+      image: "noimage.png",
+    }
+  ];
   const res = await fetch(
     "https://discord.com/api/v10/users/739702692393517076",
     {
@@ -43,15 +60,15 @@ export default async function Home() {
           <div>
             <h2>Language</h2>
             <div className={styles.main__two_content_language}>
-              {languages.map((name, index) => (
+              {languages.map((language, index) => (
                 <div key={index}>
                   <img
                     width={128}
                     height={128}
-                    src="/noimage.png"
-                    alt="noimage"
+                    src=`/${language.image}`
+                    alt="image"
                   ></img>
-                  <p>{name}</p>
+                  <p>{language.name}</p>
                 </div>
               ))}
             </div>
