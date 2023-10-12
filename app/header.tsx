@@ -2,6 +2,12 @@
 import Link from "next/link";
 import React from "react";
 import styles from "./header.module.scss";
+import { Varela_Round } from "next/font/google";
+
+const varela_round = Varela_Round({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export const Header: React.FC = () => {
   const linkItems = [
@@ -33,7 +39,9 @@ export const Header: React.FC = () => {
   });
   return (
     <header
-      className={`header ${styles.header} ${hidden ? styles.hidden : ""}`}
+      className={`header ${styles.header} ${varela_round.className} ${
+        hidden ? styles.hidden : ""
+      }`}
     >
       <div className={styles.headerHW}>
         <div className={styles.title}>
